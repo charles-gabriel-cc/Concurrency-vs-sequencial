@@ -22,6 +22,7 @@ if __name__ == "__main__":
     rects2 = ax.bar(x + width/2, parallels, width, label='Com Thread')
 
     ax.set_ylabel('Segundos')
+    ax.set_xlabel('Número de threads')
     ax.set_title('Tempo de execução por número de threads')
     ax.set_xticks(x, threads)
     ax.legend()
@@ -37,8 +38,8 @@ if __name__ == "__main__":
 
     plt.plot(threads, improvement) 
 
-    plt.xlabel("Número de threads") 
-    plt.ylabel("%") 
-    plt.title("Melhora sobre a execução sequencial") 
+    plt.xlabel('Número de threads') 
+    plt.ylabel('%') 
+    plt.title('Melhora sobre a execução sequencial') 
 
     plt.savefig('../resultados/line.png')
