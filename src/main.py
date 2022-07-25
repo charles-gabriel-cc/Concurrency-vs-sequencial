@@ -12,7 +12,7 @@ if __name__ == "__main__":
     for i in threads:
         time_concurrent = parallel(threads=i)
         parallels.append(time_concurrent)
-        improvement.append((time_sequential - time_concurrent)/time_sequential)
+        improvement.append((time_sequential - time_concurrent)*100/time_sequential)
 
     x = np.arange(len(threads))
     fig, ax = plt.subplots()
